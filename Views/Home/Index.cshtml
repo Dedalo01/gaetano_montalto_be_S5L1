@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+    <form>
+        <label for="name">Inserisci Nome: </label>
+        <input type="text" id="name" name="name"/>
+        <label for="surname">Inserisci Cognome: </label>
+        <input type="text" id="surname" name="surname" />
+        <label for="address">Inserisci Indirizzo: </label>
+        <input type="text" id="address" name="address" />
+        <label for="fiscalCode">Inserisci Codice Fiscale: </label>
+        <input type="text" id="fiscalCode" name="fiscalCode" />
+
+        <fieldset>
+            <legend>Sei coniugato?</legend>
+        <input type="radio" value="m" id="married" name="married"/>
+        <label for="married">Sine</label>
+        <input type="radio" value="f" id="notMarried" name="notMarried"/>
+        <label for="notMarried">None</label>
+        </fieldset>
+
+        <label for="sons">Numero di figli a carico: </label>
+        <input type="number" id="sons" name="sons" />
+
+        <label for="job">Inserisci la Mansione:</label>
+        <input type="text" id="job" name="job"/>
+    
+    </form>
+</div>
