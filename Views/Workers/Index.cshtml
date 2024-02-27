@@ -1,12 +1,12 @@
 ﻿
-<h3>@Model[0].Name</h3>
+@* <h3>@Model[0].Name</h3>
 
 <ul>
     @foreach(Worker worker in Model)
     {
         <li>@worker.Name</li>
     }
-</ul>
+</ul> *@
 
 <table class="table">
     <thead>
@@ -22,7 +22,7 @@
     </tr>
     </thead>
     <tbody>
-        @foreach (Worker worker in StaticDB.Workers)
+        @foreach (Worker worker in Model)
         {
             <tr>
                 <td>@worker.Id</td>
