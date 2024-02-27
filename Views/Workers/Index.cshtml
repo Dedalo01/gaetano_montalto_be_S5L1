@@ -8,18 +8,20 @@
     }
 </ul>
 
-<table>
+<table class="table">
+    <thead>
     <tr>
-        <th>id</th>
-        <th>Nome</th>
-        <th>Cognome</th>
-        <th>Indirizzo</th>
-        <th>Codice Fiscale</th>
-        <th>Sposato</th>
-        <th>Totale Figli</th>
-        <th>Posizione Lavorativa</th>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cognome</th>
+        <th scope="col">Indirizzo</th>
+        <th scope="col">Codice Fiscale</th>
+        <th scope="col">Sposato</th>
+        <th scope="col">Totale Figli</th>
+        <th scope="col">Posizione Lavorativa</th>
     </tr>
-
+    </thead>
+    <tbody>
         @foreach (Worker worker in StaticDB.Workers)
         {
             <tr>
@@ -33,6 +35,7 @@
                 <td>@worker.Position</td>
                 </tr>
         }
+    </tbody>
 </table>
 
 <a asp-controller="Workers" asp-action="RegisterWorker">Aggiungi un nuovo dipendente...</a>

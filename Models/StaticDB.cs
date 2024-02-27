@@ -5,8 +5,8 @@
         private static int _id = 0;
 
         private static readonly List<Worker> _workers = [
-        new Worker() { Id = _id++, Name = "Gianfranco", LastName = "Pieraccino", Address = "Via Milano 12", FiscalCode = "BLASDSA2", IsMarried = true, HowManyChildren = 0, Position = "Software Developer" },
-            new Worker() { Id = _id++, Name = "Giammaria", LastName = "Pierantono", Address = "Via Ezechiele 33", FiscalCode = "OSDINVE12", IsMarried = false, HowManyChildren = 3, Position = "Singer" },
+        new Worker() { Id = ++_id, Name = "Gianfranco", LastName = "Pieraccino", Address = "Via Milano 12", FiscalCode = "BLASDSA2", IsMarried = true, HowManyChildren = 0, Position = "Software Developer" },
+            new Worker() { Id = ++_id, Name = "Giammaria", LastName = "Pierantono", Address = "Via Ezechiele 33", FiscalCode = "OSDINVE12", IsMarried = false, HowManyChildren = 3, Position = "Singer" },
 
         ];
 
