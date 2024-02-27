@@ -2,33 +2,46 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
 
-    <form method="post" asp-controller="Workers" asp-action="RegisterWorker">
-        <label for="name">Inserisci Nome: </label>
-        <input type="text" id="name" name="name" />
-        <label for="lastName">Inserisci Cognome: </label>
-        <input type="text" id="lastName" name="lastName" />
-        <label for="address">Inserisci Indirizzo: </label>
-        <input type="text" id="address" name="address" />
-        <label for="fiscalCode">Inserisci Codice Fiscale: </label>
-        <input type="text" id="fiscalCode" name="fiscalCode" />
+<h1 class="display-4">Welcome</h1>
 
-        <fieldset>
-            <legend>Sei coniugato?</legend>
-            <input type="radio" value="m" id="married" name="married" />
-            <label for="married">Sine</label>
-            <input type="radio" value="f" id="notMarried" name="notMarried" />
-            <label for="notMarried">None</label>
-        </fieldset>
+<form method="post" asp-controller="Workers" asp-action="RegisterWorker">
+    <div class="mb-3">
+        <label for="name" class="form-label">Inserisci Nome: </label>
+        <input type="text" id="name" name="name" class="form-control" />
+    </div>
 
-        <label for="sons">Numero di figli a carico: </label>
-        <input type="number" id="sons" name="sons" />
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Inserisci Cognome: </label>
+        <input type="text" id="lastName" name="lastName" class="form-control" />
+    </div>
 
-        <label for="position">Inserisci la Mansione:</label>
-        <input type="text" id="job" name="position" />
+    <div class="mb-3">
+        <label for="address" class="form-label">Inserisci Indirizzo: </label>
+        <input type="text" id="address" name="address" class="form-control" />
+    </div>
 
-        <button type="submit">MANDA</button>
-    </form>
-</div>
+    <div class="mb-3">
+        <label for="fiscalCode" class="form-label">Inserisci Codice Fiscale: </label>
+        <input type="text" id="fiscalCode" name="fiscalCode" class="form-control" />
+    </div>
+
+    <fieldset class="mb-3">
+        <legend>Sei coniugato?</legend>
+        <input type="radio" value="true" id="married" name="isMarried" />
+        <label for="married">Sine</label>
+        <input type="radio" value="false" id="notMarried" name="isMarried" />
+        <label for="notMarried">None</label>
+    </fieldset>
+
+    <div class="mb-3">
+        <label for="sons" class="form-label">Numero di figli a carico: </label>
+        <input type="number" id="sons" name="sons" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="position" class="form-label">Inserisci la Mansione:</label>
+        <input type="text" id="job" name="position" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-outline-dark">MANDA</button>
+</form>
