@@ -1,0 +1,38 @@
+﻿
+<h3>@Model[0].Name</h3>
+
+<ul>
+    @foreach(Worker worker in Model)
+    {
+        <li>@worker.Name</li>
+    }
+</ul>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Indirizzo</th>
+        <th>Codice Fiscale</th>
+        <th>Sposato</th>
+        <th>Totale Figli</th>
+        <th>Posizione Lavorativa</th>
+    </tr>
+
+        @foreach (Worker worker in StaticDB.Workers)
+        {
+            <tr>
+                <td>@worker.Id</td>
+                <td>@worker.Name</td>
+                <td>@worker.LastName</td>
+                <td>@worker.Address</td>
+                <td>@worker.FiscalCode</td>
+                <td>@worker.IsMarried</td>
+                <td>@worker.HowManyChildren</td>
+                <td>@worker.Position</td>
+                </tr>
+        }
+</table>
+
+<a asp-controller="Workers" asp-action="RegisterWorker">Aggiungi un nuovo dipendente...</a>
